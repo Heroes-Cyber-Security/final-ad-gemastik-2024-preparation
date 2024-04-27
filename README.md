@@ -25,10 +25,8 @@ sudo bash wireguard-install.sh
 
 Create every client configuration file you want.
 
-Add these lines in `/etc/wireguard/wg0.conf`
-* `PostUp = iptables -t nat -I POSTROUTING -o cyber_network -j MASQUERADE`
-* `PostUp = iptables -I DOCKER-USER -i cyber_network -o forcad_network -j ACCEPT`
-* `PostUp = iptables -I DOCKER-USER -i forcad_network -o cyber_network -j ACCEPT`
+Add this line in `/etc/wireguard/wg0.conf`
+* `PostUp = iptables --flush DOCKER-ISOLATION-STAGE-2`
 
 Restart VPN
 ```shell
@@ -60,11 +58,11 @@ wg-quick up <conf_file>
 
 # Info
 * Start the ForcAD competition
-  * Run `./control.py setup && ./control.py start`
+  * `./control.py setup && ./control.py start`
 * Print team tokens and send to each team correspondingly
-  * Run `./control.py print_tokens`
+  * `./control.py print_tokens`
 * Stop the ForcAD competition
-  * Run `./control.py reset`
+  * `./control.py reset && sudo rm -rf docker_volumes`
 * Scoreboard
   * `http://10.10.0.1`
 * Admin panel
