@@ -1,10 +1,14 @@
+admin:
+  username: admin
+  password: admin
+
 game:
   mode: classic
   round_time: 20
   start_time: 2019-11-30 15:30:00
-  timezone: Europe/Moscow
+  timezone: Europe/Rome
 
-  default_score: 2500
+  default_score: 10000
   flag_lifetime: 5
   game_hardness: 10.0
   inflation: true
