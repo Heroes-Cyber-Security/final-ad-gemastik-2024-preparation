@@ -1,0 +1,75 @@
+admin:
+  username: **change_me**
+  password: **change_me**
+
+game:
+  mode: classic
+  round_time: 60
+  start_time: 2019-11-30 15:30:00
+  timezone: Europe/Rome
+
+  default_score: 10000
+  flag_lifetime: 5
+  game_hardness: 10.0
+  inflation: true
+
+tasks:
+  - checker: test_service/checker.py
+    checker_timeout: 10
+    checker_type: hackerdom
+    gets: 2
+    name: test_basic_service
+    places: 5
+    puts: 2
+
+  - checker: test_service/gevent_checker.py
+    checker_timeout: 10
+    checker_type: gevent
+    gets: 2
+    name: test_gevent_service_1
+    places: 5
+    puts: 2
+
+teams:
+  - ip: 10.60.0.1
+    name: "NOP Team"
+  - ip: 10.60.1.1
+    name: "Team 1"
+  - ip: 10.60.2.1
+    name: "Team 2"
+  - ip: 10.60.3.1
+    name: "Team 3"
+  - ip: 10.60.4.1
+    name: "Team 4"
+  - ip: 10.60.5.1
+    name: "Team 5"
+  - ip: 10.60.6.1
+    name: "Team 6"
+  - ip: 10.60.7.1
+    name: "Team 7"
+  - ip: 10.60.8.1
+    name: "Team 8"
+  - ip: 10.60.9.1
+    name: "Team 9"
+  - ip: 10.60.10.1
+    name: "Team 10"
+  - ip: 10.60.11.1
+    name: "Team 11"
+  - ip: 10.60.12.1
+    name: "Team 12"
+  - ip: 10.60.13.1
+    name: "Team 13"
+  - ip: 10.60.14.1
+    name: "Team 14"
+  - ip: 10.60.15.1
+    name: "Team 15"
+  - ip: 10.60.16.1
+    name: "Team 16"
+  - ip: 10.60.17.1
+    name: "Team 17"
+  - ip: 10.60.18.1
+    name: "Team 18"
+  - ip: 10.60.19.1
+    name: "Team 19"
+  - ip: 10.60.20.1
+    name: "Team 20"
