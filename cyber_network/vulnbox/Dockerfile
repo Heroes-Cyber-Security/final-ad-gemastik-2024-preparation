@@ -13,8 +13,10 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+RUN pip3 install -r flags_shop/requirements.txt
+
 EXPOSE 22
+EXPOSE 9876
 EXPOSE 1234 1235 1236 1237
 
 CMD [ "bash", "entrypoint.sh" ]
-
