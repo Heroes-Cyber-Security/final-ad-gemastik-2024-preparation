@@ -4,8 +4,10 @@ dockerd &
 
 sleep 10
 
-cd CyberUni
+cd ./flags_shop
+python3 app.py &
+
+cd ../cyberuni
 bash deploy.sh &
 
 tail -f /dev/null
-
