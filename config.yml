@@ -14,21 +14,20 @@ game:
   inflation: true
 
 tasks:
-  - checker: test_service/checker.py
-    checker_timeout: 10
-    checker_type: hackerdom
-    gets: 2
-    name: test_basic_service
-    places: 5
-    puts: 2
-
-  - checker: test_service/gevent_checker.py
-    checker_timeout: 10
-    checker_type: gevent
-    gets: 2
-    name: test_gevent_service_1
-    places: 5
-    puts: 2
+  - checker: flags_shop/checker.py
+    checker_timeout: 30
+    checker_type: pfr
+    gets: 1
+    name: Flags Shop
+    places: 1
+    puts: 1
+  - checker: cyberuni-examnotes/checker.py
+    checker_timeout: 30
+    checker_type: pfr
+    gets: 1
+    name: CyberUni - ExamNotes
+    places: 1
+    puts: 1
 
 teams:
   - ip: 10.60.0.1
