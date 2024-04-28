@@ -37,8 +37,6 @@ tasks:
     puts: 1
 
 teams:
-  - ip: 10.60.0.1
-    name: "NOP Team"
   - ip: 10.60.1.1
     name: "Team 1"
   - ip: 10.60.2.1
