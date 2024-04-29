@@ -35,6 +35,13 @@ tasks:
     name: CyberUni - EncryptedNotes
     places: 1
     puts: 1
+  - checker: cyberuni-examportal/checker.py
+    checker_timeout: 30
+    checker_type: pfr
+    gets: 1
+    name: CyberUni - ExamPortal
+    places: 1
+    puts: 1
 
 teams:
   - ip: 10.60.1.1
