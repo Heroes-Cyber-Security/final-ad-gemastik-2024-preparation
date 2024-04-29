@@ -20,7 +20,7 @@ There is an automatic script in this repository.
 You can run in this way:
 ```shell
 wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
-bash setup.sh
+bash setup.bash
 ```
 
 ## ForcAD Configuration
