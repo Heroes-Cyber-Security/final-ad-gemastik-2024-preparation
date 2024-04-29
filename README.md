@@ -75,13 +75,19 @@ sudo wg-quick up <conf_file>
 
 <br/>
 
-# Info
-* Start the ForcAD competition
+# Run ForcAD
+* Start vulnboxes from ForcAD/cyber_network directory
+  * `docker compose up --build -d && docker compose logs -f`
+* As soon as the vulnboxes are ready, start ForcAD from ForcAD directory
   * `./control.py setup && ./control.py start`
 * Print team tokens and send to each team correspondingly
   * `./control.py print_tokens`
-* Stop the ForcAD competition
+* When you want to stop ForcAD
   * `./control.py reset && sudo rm -rf docker_volumes`
+
+<br/>
+
+# Info
 * Scoreboard
   * `http://10.10.0.1`
 * Admin panel
@@ -92,3 +98,16 @@ sudo wg-quick up <conf_file>
   * `http://10.10.0.1/flags`
 * Flag format
   * `[A-Z0-9]{31}=`
+
+<br/>
+
+# Code to submit flags
+```python
+#!/usr/bin/python3
+
+import requests
+
+def submit_flags(team_token, flags):
+	print(requests.put(f'http://172.25.250.1/flags', headers={'X-Team-Token': team_token}, json=flags).text)
+```
+Please note: `flags` must be a list.
