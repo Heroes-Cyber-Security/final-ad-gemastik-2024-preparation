@@ -15,30 +15,16 @@ bash setup.sh
 ```
 
 ## VPN Configuration
-Install Wireguard with automated script.
-```shell
-wget https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
-sudo bash wireguard-install.sh
-```
-* Server Wireguard IPv4: 10.10.0.1
-* Allowed IPs list: 10.0.0.0/8
+Run `bash wireguard_keygen.bash` to generate the server and team configuration files.
 
-Create every client configuration file you want.
-
-Add this line in `/etc/wireguard/wg0.conf`
-* `PostUp = iptables --flush DOCKER-ISOLATION-STAGE-2`
-
-Restart VPN
-```shell
-wg-quick down wg0
-wg-quick up wg0
-```
+For example, if your server uses network interface `enp0s3`, ip `192.168.1.100`, port `51820` and you need `20` teams with `5` clients per team:
+* `bash wireguard_keygen.bash enp0s3 192.168.1.100 51820 20 5`
 
 ## ForcAD Configuration
 * Open `config.yml` file
   * Change admin `username` and `password`
   * Delete or add teams
-    * Range 10.80.1.1 - 10.80.250.1
+    * `10.80.<team>.1`  -  1 <= team <= 255
   * Change `timezone` and `start_time` (optional)
 
 <br/>
