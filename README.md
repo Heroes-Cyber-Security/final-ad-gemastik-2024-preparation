@@ -37,7 +37,7 @@ sudo apt install wireguard resolvconf
 Move to your configuration file place.
 ```shell
 sudo mv <conf_file>.conf /etc/wireguard/<conf_file>.conf
-wg-quick up <conf_file>
+sudo wg-quick up <conf_file>
 ```
 
 <br/>
