@@ -9,34 +9,67 @@ In this case the whole system is configured starting from a clean Ubuntu 22.04 a
 # Game Master
 
 ## Setup
+From a clean Ubuntu 22.04:
+* Update, upgrade and install necessary packets
+* Install docker and docker compose v2
+* Clone this repository
+* Install ForcAD requirements
+* Give execution permissions to control.py and checkers
+
+There is an automatic script in this repository.
+You can run in this way:
 ```shell
 wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
 bash setup.sh
 ```
 
-## VPN Configuration
-Run `bash wireguard_keygen.bash` to generate the server and team configuration files.
-
-For example, if your server uses network interface `enp0s3`, ip `192.168.1.100`, port `51820` and you need `20` teams with `5` clients per team:
-* `bash wireguard_keygen.bash enp0s3 192.168.1.100 51820 20 5`
-
 ## ForcAD Configuration
 * Open `config.yml` file
   * Change admin `username` and `password`
   * Delete or add teams
-    * `10.80.<team>.1`  -  1 <= team <= 255
+    * `10.80.<team>.1`
+      * $1 \leq team \leq 255$
   * Change `timezone` and `start_time` (optional)
+
+## VPN Configuration
+Install Wireguard.
+```shell
+sudo apt install wireguard resolvconf
+```
+
+Run `bash wireguard_keygen.bash` to generate the server and team configuration files.
+
+For example, if your server uses network interface `enp0s3`, ip `192.168.1.100`, port `51820` and you need `20` teams with `5` clients per team:
+```shell
+bash wireguard_keygen.bash enp0s3 192.168.1.100 51820 20 5
+```
+
+Move wg0.conf to wireguard directory.
+```shell
+sudo mv wg0.conf /etc/wireguard/wg0.conf
+```
+
+Start server wireguard.
+```shell
+sudo wg-quick up wg0
+```
+
+Share to team clients configuration files.
 
 <br/>
 
 # Team Clients
-Get a client configuration file from the Game Master.
+Install Wireguard.
 ```shell
 sudo apt install wireguard resolvconf
 ```
-Move to your configuration file place.
+Get a client configuration file from the Game Master and move to your configuration file place.
 ```shell
 sudo mv <conf_file>.conf /etc/wireguard/<conf_file>.conf
+```
+
+Start client wireguard.
+```shell
 sudo wg-quick up <conf_file>
 ```
 
