@@ -148,4 +148,5 @@ networks:
       driver: default
       config:
         - subnet: 10.60.0.0/16
-
+    driver_opts:
+      com.docker.network.bridge.name: cyber_network
