@@ -13,6 +13,8 @@ services:
     volumes:
       - ./examportal/db/init:/docker-entrypoint-initdb.d
       - ./examportal/db/data:/var/lib/mysql
+    dns:
+      - 10.60.0.1
 
   auth_service:
     build: ./auth_service
@@ -20,6 +22,8 @@ services:
     ports:
       - "0.0.0.0:1234:8000"
     restart: unless-stopped
+    dns:
+      - 10.60.0.1
 
   examnotes:
     build: ./examnotes
@@ -27,6 +31,8 @@ services:
     ports:
       - "0.0.0.0:1235:8000"
     restart: unless-stopped
+    dns:
+      - 10.60.0.1
 
   encryptednotes:
     build: ./encryptednotes
@@ -34,6 +40,8 @@ services:
     ports:
       - "0.0.0.0:1236:8000"
     restart: unless-stopped
+    dns:
+      - 10.60.0.1
 
   examportal:
     build: ./examportal
@@ -48,3 +56,5 @@ services:
     restart: unless-stopped
     depends_on:
       - examportal-db
+    dns:
+      - 10.60.0.1
