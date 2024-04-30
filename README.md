@@ -19,7 +19,7 @@ From a clean Ubuntu 22.04:
 There is an automatic script in this repository.
 You can run in this way:
 ```shell
-wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.sh
+wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.bash
 bash setup.bash
 ```
 
