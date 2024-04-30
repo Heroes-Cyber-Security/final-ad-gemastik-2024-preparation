@@ -1,3 +1,7 @@
+iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination 10.60.0.1:53
+iptables -I FORWARD -j ACCEPT
+iptables -t nat -A POSTROUTING -j MASQUERADE
+
 service ssh start
 
 dockerd &
