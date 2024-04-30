@@ -8,6 +8,9 @@ services:
         ipv4_address: 10.60.1.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox2:
     container_name: vulnbox2
     build: ./vulnbox
@@ -17,6 +20,9 @@ services:
         ipv4_address: 10.60.2.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox3:
     container_name: vulnbox3
     build: ./vulnbox
@@ -26,6 +32,9 @@ services:
         ipv4_address: 10.60.3.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox4:
     container_name: vulnbox4
     build: ./vulnbox
@@ -35,6 +44,9 @@ services:
         ipv4_address: 10.60.4.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox5:
     container_name: vulnbox5
     build: ./vulnbox
@@ -44,6 +56,9 @@ services:
         ipv4_address: 10.60.5.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox6:
     container_name: vulnbox6
     build: ./vulnbox
@@ -53,6 +68,9 @@ services:
         ipv4_address: 10.60.6.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox7:
     container_name: vulnbox7
     build: ./vulnbox
@@ -62,6 +80,9 @@ services:
         ipv4_address: 10.60.7.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox8:
     container_name: vulnbox8
     build: ./vulnbox
@@ -71,6 +92,9 @@ services:
         ipv4_address: 10.60.8.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox9:
     container_name: vulnbox9
     build: ./vulnbox
@@ -80,6 +104,9 @@ services:
         ipv4_address: 10.60.9.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox10:
     container_name: vulnbox10
     build: ./vulnbox
@@ -89,6 +116,9 @@ services:
         ipv4_address: 10.60.10.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox11:
     container_name: vulnbox11
     build: ./vulnbox
@@ -98,6 +128,9 @@ services:
         ipv4_address: 10.60.11.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox12:
     container_name: vulnbox12
     build: ./vulnbox
@@ -107,6 +140,9 @@ services:
         ipv4_address: 10.60.12.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox13:
     container_name: vulnbox13
     build: ./vulnbox
@@ -116,6 +152,9 @@ services:
         ipv4_address: 10.60.13.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox14:
     container_name: vulnbox14
     build: ./vulnbox
@@ -125,6 +164,9 @@ services:
         ipv4_address: 10.60.14.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox15:
     container_name: vulnbox15
     build: ./vulnbox
@@ -134,6 +176,9 @@ services:
         ipv4_address: 10.60.15.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox16:
     container_name: vulnbox16
     build: ./vulnbox
@@ -143,6 +188,9 @@ services:
         ipv4_address: 10.60.16.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox17:
     container_name: vulnbox17
     build: ./vulnbox
@@ -152,6 +200,9 @@ services:
         ipv4_address: 10.60.17.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox18:
     container_name: vulnbox18
     build: ./vulnbox
@@ -161,6 +212,9 @@ services:
         ipv4_address: 10.60.18.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox19:
     container_name: vulnbox19
     build: ./vulnbox
@@ -170,6 +224,9 @@ services:
         ipv4_address: 10.60.19.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
   vulnbox20:
     container_name: vulnbox20
     build: ./vulnbox
@@ -179,6 +236,9 @@ services:
         ipv4_address: 10.60.20.1
     dns:
       - 10.80.150.1
+    volumes:
+      - /var/lib/docker/overlay2:/var/lib/docker/overlay2
+      - /var/lib/docker/image/overlay2:/var/lib/docker/image/overlay2
 
 networks:
   cyber_network:
