@@ -9,8 +9,8 @@ x-service: &default-ms
     - ./docker_config/redis_environment.env
     - ./docker_config/rabbitmq_environment.env
   restart: on-failure
-  dns:
-    - 10.80.150.1
+  dns:                # Unipa ready
+    - 10.80.150.1     # Unipa ready
 
 x-celery-service: &default-celery-ms
   build:
@@ -20,8 +20,8 @@ x-celery-service: &default-celery-ms
     - ./checkers/:/checkers/
   env_file: *db-environment
   restart: on-failure
-  dns:
-    - 10.80.150.1
+  dns:                # Unipa ready
+    - 10.80.150.1     # Unipa ready
 
 services:
   celery:
@@ -31,8 +31,8 @@ services:
       - SERVICE=worker
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   flower:
     <<: *default-celery-ms
@@ -46,8 +46,8 @@ services:
       - ./docker_config/rabbitmq_environment.env
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   initializer:
     build:
@@ -62,8 +62,8 @@ services:
     restart: on-failure
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   ticker:
     <<: *default-ms
@@ -72,8 +72,8 @@ services:
       - SERVICE=ticker
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   client-api:
     <<: *default-ms
@@ -82,8 +82,8 @@ services:
       - SERVICE=api
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   admin-api:
     <<: *default-ms
@@ -97,8 +97,8 @@ services:
       - ./docker_config/rabbitmq_environment.env
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   events:
     <<: *default-ms
@@ -107,8 +107,8 @@ services:
       - SERVICE=events
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   monitoring:
     <<: *default-ms
@@ -117,8 +117,8 @@ services:
       - SERVICE=monitoring
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   http-receiver:
     <<: *default-ms
@@ -127,8 +127,8 @@ services:
       - SERVICE=http_receiver
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   nginx:
     build:
@@ -149,8 +149,8 @@ services:
       - http-receiver
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   redis:
     image: redis:6.2.5-alpine
@@ -164,8 +164,8 @@ services:
       - "6379:6379"
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   rabbitmq:
     hostname: rabbitmq
@@ -178,8 +178,8 @@ services:
       - "15672:15672"
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
   postgres:
     image: postgres:13.4-alpine
@@ -193,8 +193,8 @@ services:
       - "6432:5432"
     networks:
       - forcad_network
-    dns:
-      - 10.80.150.1
+    dns:                # Unipa ready
+      - 10.80.150.1     # Unipa ready
 
 networks:
   forcad_network:
