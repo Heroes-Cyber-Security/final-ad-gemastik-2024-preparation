@@ -37,7 +37,7 @@ Install Wireguard.
 sudo apt install wireguard resolvconf
 ```
 
-Run `bash wireguard_keygen.bash` to generate the server and team configuration files.
+Run `wireguard_keygen.bash` to generate the server and team configuration files.
 
 For example, if your server uses network interface `enp0s3`, ip `192.168.1.100`, port `51820` and you need `20` teams with `5` clients per team:
 ```shell
