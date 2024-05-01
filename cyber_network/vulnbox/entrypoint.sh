@@ -1,6 +1,6 @@
-iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination 10.80.150.1:53
-iptables -I FORWARD -j ACCEPT
-iptables -t nat -A POSTROUTING -j MASQUERADE
+iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination 10.80.150.1:53     # Unipa ready
+iptables -I FORWARD -j ACCEPT                                                               # Unipa ready
+iptables -t nat -A POSTROUTING -j MASQUERADE                                                # Unipa ready
 
 service ssh start
 
