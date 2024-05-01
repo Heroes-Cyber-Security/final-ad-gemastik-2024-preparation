@@ -84,3 +84,13 @@ teams:
     name: "Team 19"
   - ip: 10.60.20.1
     name: "Team 20"
+  - ip: 10.60.21.1
+    name: "Team 21"
+  - ip: 10.60.22.1
+    name: "Team 22"
+  - ip: 10.60.23.1
+    name: "Team 23"
+  - ip: 10.60.24.1
+    name: "Team 24"
+  - ip: 10.60.25.1
+    name: "Team 25"
