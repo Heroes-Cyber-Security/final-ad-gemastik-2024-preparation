@@ -49,8 +49,7 @@ COPY backend /app
 COPY ./docker_config/celery/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-RUN mkdir /app/services/examportal-data && \      # Cyberuni ready
-    chown nobody /app/services/examportal-data    # Cyberuni ready
+RUN mkdir /app/services/examportal-data && chown nobody /app/services/examportal-data     # Cyberuni ready
 
 USER nobody
 
