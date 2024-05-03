@@ -5,6 +5,8 @@ sudo apt update && sudo apt full-upgrade -y
 sudo apt install -y curl git python3-pip
 sudo apt install -y docker.io docker-compose-v2
 
+sudo sysctl -w fs.aio-max-nr=2097152
+
 git clone https://github.com/DnyyGzd/ForcAD
 
 pip3 install -r ForcAD/cli/requirements.txt
