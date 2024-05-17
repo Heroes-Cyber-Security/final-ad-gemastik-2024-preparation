@@ -1,10 +1,10 @@
 # Initial premise
-ForcAD was not designed and created by me. I used [ForcAD](https://github.com/pomo-mondreganto/ForcAD) made available by [pomo-mondreganto](https://github.com/pomo-mondreganto). This repository's sole purpose is to speed up the setup of ForcAD with services and checkers written by me or sourced from other competitions.
+ForcAD was not designed and created by me. I used [ForcAD](https://github.com/pomo-mondreganto/ForcAD) made available by [pomo-mondreganto](https://github.com/pomo-mondreganto). The sole purpose of this repository is to speed up the setup of ForcAD with Docker-in-Docker vulnboxes containing services written by me or sourced from other AD competitions.
 
 In this setup, the entire system is configured starting from a clean Ubuntu 22.04 installation, utilizing Docker for the network infrastructure.
 
 Services available:
-* Flags_Shop (service and checker by me)
+* Flags Shop (service and checker by me)
 * CyberUni (service and checker made by [Cybersecurity National Lab](https://github.com/CybersecNatLab), checker adapted by me)
 
 <br/>
@@ -13,14 +13,6 @@ Services available:
 
 ## Setup
 From a clean Ubuntu 22.04:
-* Update, upgrade and install necessary packets
-* Install docker and docker compose v2
-* Clone this repository
-* Install ForcAD requirements
-* Give execution permissions to control.py and checkers
-
-There is an automatic script in this repository.
-You can run in this way:
 ```shell
 wget https://raw.githubusercontent.com/DnyyGzd/ForcAD/main/setup.bash
 bash setup.bash
@@ -61,11 +53,12 @@ Share to team clients configuration files.
 
 <br/>
 
-# Team Clients
+# Team Client
 Install Wireguard.
 ```shell
 sudo apt install wireguard resolvconf
 ```
+
 Get a client configuration file from the Game Master and move to your configuration file place.
 ```shell
 sudo mv <conf_file>.conf /etc/wireguard/<conf_file>.conf
@@ -85,7 +78,7 @@ sudo wg-quick up <conf_file>
   * `./control.py setup && ./control.py start`
 * Print team tokens and send to each team correspondingly
   * `./control.py print_tokens`
-* When you want to stop ForcAD
+* When you want to stop ForcAD and clean the leaderboard
   * `./control.py reset && sudo rm -rf docker_volumes`
 
 <br/>
