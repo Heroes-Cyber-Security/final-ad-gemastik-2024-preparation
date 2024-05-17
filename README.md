@@ -1,8 +1,11 @@
 # Initial premise
-ForcAD was not designed and created by me. I used the [ForcAD](https://github.com/pomo-mondreganto/ForcAD) made available by [pomo-mondreganto](https://github.com/pomo-mondreganto).
-This repository has the sole purpose of speeding up the setup of ForcAD with services and checkers written by me and my team.
+ForcAD was not designed and created by me. I used [ForcAD](https://github.com/pomo-mondreganto/ForcAD) made available by [pomo-mondreganto](https://github.com/pomo-mondreganto). This repository's sole purpose is to speed up the setup of ForcAD with services and checkers written by me or sourced from other competitions.
 
-In this case the whole system is configured starting from a clean Ubuntu 22.04 and using the potential of docker for the network infrastructure.
+In this setup, the entire system is configured starting from a clean Ubuntu 22.04 installation, utilizing Docker for the network infrastructure.
+
+Services available:
+* Flags_Shop (service and checker by me)
+* CyberUni (service and checker made by [Cybersecurity National Lab](https://github.com/CybersecNatLab), checker adapted by me)
 
 <br/>
 
