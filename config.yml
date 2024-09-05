@@ -1,12 +1,12 @@
 admin:
-  username: **change_me**
-  password: **change_me**
+  username: admin
+  password: admin
 
 game:
   mode: classic
   round_time: 60
-  start_time: 2019-11-30 15:30:00
-  timezone: Europe/Rome
+  start_time: 2024-09-07 11:00:00
+  timezone: Asia/Bangkok
 
   default_score: 10000
   flag_lifetime: 5
@@ -14,83 +14,83 @@ game:
   inflation: true
 
 tasks:
-  - checker: flags_shop/checker.py
+  - checker: art/checker.py
     checker_timeout: 30
-    checker_type: pfr
+    checker_type: hackerdom
     gets: 1
-    name: Flags Shop
+    name: art
     places: 1
     puts: 1
-  - checker: cyberuni-examnotes/checker.py
+  - checker: back-to-basic/checker.py
     checker_timeout: 30
-    checker_type: pfr
+    checker_type: hackerdom
     gets: 1
-    name: CyberUni - ExamNotes
+    name: back-to-basic
     places: 1
     puts: 1
-  - checker: cyberuni-encryptednotes/checker.py
+  - checker: burvesigner/checker.py
     checker_timeout: 30
-    checker_type: pfr
+    checker_type: hackerdom
     gets: 1
-    name: CyberUni - EncryptedNotes
+    name: burvesigner
     places: 1
     puts: 1
-  - checker: cyberuni-examportal/checker.py
+  - checker: crawlback/checker.py
     checker_timeout: 30
-    checker_type: pfr
+    checker_type: hackerdom
     gets: 1
-    name: CyberUni - ExamPortal
+    name: crawlback
+    places: 1
+    puts: 1
+  - checker: gemas-fetcher/checker.py
+    checker_timeout: 30
+    checker_type: hackerdom
+    gets: 1
+    name: gemas-fetcher
+    places: 1
+    puts: 1
+  - checker: gemas-notes/checker.py
+    checker_timeout: 30
+    checker_type: hackerdom
+    gets: 1
+    name: gemas-notes
+    places: 1
+    puts: 1
+  - checker: hirnfick/checker.py
+    checker_timeout: 30
+    checker_type: hackerdom
+    gets: 1
+    name: hirnfick
+    places: 1
+    puts: 1
+  - checker: pasta/checker.py
+    checker_timeout: 30
+    checker_type: hackerdom
+    gets: 1
+    name: pasta
+    places: 1
+    puts: 1
+  - checker: s3/checker.py
+    checker_timeout: 30
+    checker_type: hackerdom
+    gets: 1
+    name: s3
+    places: 1
+    puts: 1
+  - checker: xl/checker.py
+    checker_timeout: 30
+    checker_type: hackerdom
+    gets: 1
+    name: xl
     places: 1
     puts: 1
 
 teams:
-  - ip: 10.60.1.1
-    name: "Team 1"
-  - ip: 10.60.2.1
-    name: "Team 2"
-  - ip: 10.60.3.1
-    name: "Team 3"
-  - ip: 10.60.4.1
-    name: "Team 4"
-  - ip: 10.60.5.1
-    name: "Team 5"
-  - ip: 10.60.6.1
-    name: "Team 6"
-  - ip: 10.60.7.1
-    name: "Team 7"
-  - ip: 10.60.8.1
-    name: "Team 8"
-  - ip: 10.60.9.1
-    name: "Team 9"
-  - ip: 10.60.10.1
-    name: "Team 10"
-  - ip: 10.60.11.1
-    name: "Team 11"
-  - ip: 10.60.12.1
-    name: "Team 12"
-  - ip: 10.60.13.1
-    name: "Team 13"
-  - ip: 10.60.14.1
-    name: "Team 14"
-  - ip: 10.60.15.1
-    name: "Team 15"
-  - ip: 10.60.16.1
-    name: "Team 16"
-  - ip: 10.60.17.1
-    name: "Team 17"
-  - ip: 10.60.18.1
-    name: "Team 18"
-  - ip: 10.60.19.1
-    name: "Team 19"
-  - ip: 10.60.20.1
-    name: "Team 20"
-  - ip: 10.60.21.1
-    name: "Team 21"
-  - ip: 10.60.22.1
-    name: "Team 22"
-  - ip: 10.60.23.1
-    name: "Team 23"
-  - ip: 10.60.24.1
-    name: "Team 24"
-  - ip: 10.60.25.1
-    name: "Team 25"
+  - ip: 10.104.0.3
+    name: "HCS - Kos0ng Fans Club"
+  - ip: 10.104.0.4
+    name: "HCS - murid mentor"
+  - ip: 10.104.0.5
+    name: "HCS - GaadaHandleCrypto"
+  - ip: 10.104.0.6
+    name: "Guest"
